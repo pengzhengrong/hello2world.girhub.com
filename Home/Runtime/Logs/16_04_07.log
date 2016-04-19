@@ -1,0 +1,27 @@
+[ 2016-04-07T16:52:49+08:00 ] 127.0.0.1 /home.php/Admin/User/user.html
+ERR: 非法操作:user
+
+[ 2016-04-07T16:54:20+08:00 ] 127.0.0.1 /home.php/Admin/User/user_add.html
+ERR: 非法操作:user_add
+
+[ 2016-04-07T17:24:59+08:00 ] 127.0.0.1 /home.php/Admin/Rbac/user_role.html
+ERR: 非法操作:user_role
+
+[ 2016-04-07T17:26:17+08:00 ] 127.0.0.1 /home.php/Admin/Rbac/user_role.html
+ERR: 非法操作:user_role
+
+[ 2016-04-07T17:26:35+08:00 ] 127.0.0.1 /home.php/Admin/Rbac/user_role
+ERR: 非法操作:user_role
+
+[ 2016-04-07T17:51:48+08:00 ] 127.0.0.1 /home.php/Admin/User/user_role/uid/1.html
+ERR: Model:getFields您所请求的方法不存在！
+
+[ 2016-04-07T18:12:54+08:00 ] 127.0.0.1 /home.php/Admin/User/role_user_add
+ERR: 非法操作:role_user_add
+
+[ 2016-04-07T18:14:01+08:00 ] 127.0.0.1 /home.php/Admin/User/role_user_add
+ERR: 非法操作:role_user_add
+
+[ 2016-04-07T19:39:20+08:00 ] 127.0.0.1 /home.php/Admin/User/Admin/User/index
+ERR: 非法操作:Admin
+

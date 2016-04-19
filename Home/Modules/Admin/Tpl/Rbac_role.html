@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//Ddiv XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/Ddiv/xhtml1-transitional.ddiv">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="__PUBLIC__/Admin/Css/public.css?vision={$vision}" />
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<script type="text/javascript" src="__PUBLIC__/Admin/Js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/Admin/Js/login.js"></script>
+		<script type="text/javascript">
+			var code_url = "{:U('/Admin/Login/verify','','')}";
+		</script>
+		{:baiduAccount()}
+	</head>
+	<body>
+		<div class="top"><a href="{:U('Admin/Rbac/role_add','','')}" >PUBLISH</a></div>
+		<div  class="wrap">
+			<foreach name="rest" item="v">
+				<div class="modules">
+					<p>
+						<strong style="font-size: 20px; color: #333">{$v.name}({$v.remark}) </strong>
+						<a href="{:U('Admin/Rbac/role_add',array('pid'=>$v['id']) ,'')}">ADD</a>|
+						<a href="{:U('Admin/Rbac/role_delete','id='.$v['id'] ,'' )}">DELETE</a>
+					</p>
+				<foreach name="v.child" item="action" > 
+					<div class="action">
+						<p>{$action.name}({$action.remark})
+						<a href="{:U('Admin/Rbac/role_add',array('pid'=>$action['id']) ,'')}">ADD</a>|
+						<a href="{:U('Admin/Rbac/role_delete','id='.$action['id'] ,'' )}">DELETE</a></p>
+					<foreach name="action.child" item="method" > 
+						<div class="method">
+							{$method.name}({$method.remark})
+							<a href="{:U('Admin/Rbac/role_delete','id='.$method['id'] ,'' )}">DELETE</a>
+						</div>
+					</foreach>
+					</div>
+				</foreach>
+				</div>
+			</foreach>
+
+		</div>
+	</body>
+</html>

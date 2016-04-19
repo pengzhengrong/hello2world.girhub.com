@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript" src="__PUBLIC__/Admin/Js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/Js/index.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/Admin/Css/public.css" />
+<link rel="stylesheet" href="__PUBLIC__/Admin/Css/index.css" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<base target="iframe"/>
+<head>
+{:baiduAccount()}
+</head>
+<body>
+<table class="table">
+<tr>
+  <th>ID</th>
+  <th>UNAME</th>
+  <th>CONTENT</th>
+  <th>TIME</th>
+  <th>OPERATOR</th>
+</tr>
+<foreach name='wish'  item='v' >
+  <tr>
+    <td>{$v.id}</td>
+    <td>{$v.username}</td>
+    <td>{$v.content}</td>
+    <td>{$v.time|date='Y-m-d H:i',###}</td>
+    <td><a  href="{:U('Admin/WishMan/delete',array('id'=>$v['id']))}">DELETE</a>|
+             <a  href="{:U('Admin/WishMan/edit',array('id'=>$v['id']))}">EDIT</a>
+    </td>
+  </tr>
+</foreach>
+</table>
+{$page->show()}
+
+</body>
+
+</html>
